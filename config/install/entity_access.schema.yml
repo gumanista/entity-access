@@ -1,0 +1,22 @@
+user.role.*:
+  type: config_entity
+  label: 'User role settings'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    weight:
+      type: integer
+      label: 'User role weight'
+    is_admin:
+      type: boolean
+      label: 'User is admin'
+    permissions:
+      type: sequence
+      label: 'Permissions'
+      sequence:
+        type: string
+        label: 'Permission'

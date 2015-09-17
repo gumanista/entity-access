@@ -1,0 +1,4 @@
+services:
+  user.permissions:
+    class: Drupal\user\PermissionHandler
+    arguments: ['@module_handler', '@string_translation', '@controller_resolver']
