@@ -28,7 +28,7 @@ use Drupal\user\RoleInterface;
  *     }
  *   },
  *   admin_permission = "administer entity roles",
- *   config_prefix = "entity_role",
+ *   config_prefix = "entity_access_role",
  *   static_cache = TRUE,
  *   entity_keys = {
  *     "id" = "id",
@@ -36,10 +36,9 @@ use Drupal\user\RoleInterface;
  *     "label" = "label"
  *   },
  *   links = {
- *     "delete-form" = "/admin/people/entity-roles/manage/{entity_access_role}/delete",
- *     "edit-form" = "/admin/people/entity-roles/manage/{entity_access_role}",
-// *     "edit-permissions-form" = "/admin/people/permissions/{entity_access_role}",
- *     "collection" = "/admin/people/entity-roles",
+ *     "delete-form" = "/admin/config/entity-roles/manage/{entity_access_role}/delete",
+ *     "edit-form" = "/admin/config/entity-roles/manage/{entity_access_role}",
+ *     "collection" = "/admin/config/entity-roles",
  *   },
  *   config_export = {
  *     "id",
@@ -50,6 +49,6 @@ use Drupal\user\RoleInterface;
  *   }
  * )
  */
-class Role extends Drupal\user\Entity\Role {
+class Role extends \Drupal\user\Entity\Role {
 
 }

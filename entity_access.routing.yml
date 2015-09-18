@@ -1,39 +1,41 @@
 entity.entity_access_role.collection:
-  path: '/admin/entity-access/roles'
+  path: '/admin/config/entity-roles'
   defaults:
     _entity_list: 'entity_access_role'
     _title: 'Roles'
   requirements:
     _permission: 'administer permissions'
 
-user.role_add:
-  path: '/admin/entity-access/roles/add'
-  defaults:
-    _entity_form: user_entity_access_rolerole.default
-    _title: 'Add role'
-  requirements:
-    _permission: 'administer permissions'
+#entity.entity_access_role.add:
+#  path: '/admin/config/entity-roles/roles/add'
+#  defaults:
+#    _entity_form: entity_access_role.default
+#    _title: 'Add role'
+#  requirements:
+#    _permission: 'administer permissions'
+#
 
-entity.user_role.edit_form:
-  path: '/admin/entity-access/roles/manage/{user_role}'
+entity.entity_access_role.edit_form:
+  path: '/admin/config/entity-roles/roles/manage/{entity_access_role}'
   defaults:
     _entity_form: entity_access_role.default
     _title: 'Edit role'
   requirements:
     _entity_access: entity_access_role.update
 
-entity.user_role.delete_form:
-  path: '/admin/entity-access/roles/manage/{user_role}/delete'
+entity.entity_access_role.delete_form:
+  path: '/admin/config/entity-roles/roles/manage/{entity_access_role}/delete'
   defaults:
     _entity_form: entity_access_role.delete
     _title: 'Delete role'
   requirements:
     _entity_access: entity_access_role.delete
 
-user.admin_permissions:
-  path: '/admin/entity-access/permissions'
+entity_access.admin_permissions:
+  path: '/admin/config/entity-roles/permissions'
   defaults:
-    _form: '\Drupal\user\Form\EntityAccessPermissionsForm'
+    _form: '\Drupal\entity_access\Form\EntityAccessPermissionsForm'
     _title: 'Permissions'
   requirements:
     _permission: 'administer permissions'
+    _module_dependencies: user

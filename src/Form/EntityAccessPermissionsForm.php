@@ -2,17 +2,13 @@
 
 namespace Drupal\entity_access\Form;
 
-use Drupal\user;
+use Drupal\user\Form\UserPermissionsForm;
 
-class EntityAccessPermissionsForm extends user\UserPermissionsForm {
+class EntityAccessPermissionsForm extends UserPermissionsForm {
   /**
    * {@inheritdoc}
    */
-  public function __construct(
-    PermissionHandlerInterface $permission_handler,
-    RoleStorageInterface $role_storage,
-    ModuleHandlerInterface $module_handler
-  ) {
+  public function __construct(PermissionHandlerInterface $permission_handler, RoleStorageInterface $role_storage, ModuleHandlerInterface $module_handler) {
     $this->permissionHandler = $permission_handler;
     $this->roleStorage       = $role_storage;
     $this->moduleHandler     = $module_handler;

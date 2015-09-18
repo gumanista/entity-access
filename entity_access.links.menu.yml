@@ -1,0 +1,19 @@
+entity.entity_access_role.collection:
+  title: 'Administer Entity Access'
+  parent: user.admin_index
+  description: ''
+  weight: -10
+  route_name: entity.entity_access_role.collection
+
+#entity_access.admin.role:
+#  title: 'Roles'
+#  parent: entity_access.admin
+#  description: ''
+#  weight: -10
+#  route_name: entity_access.admin.role.collection
+#
+entity_access.admin.permission:
+  title: 'Permissions'
+  description: ''
+  parent: entity.entity_access_role.collection
+  route_name: entity_access_role.admin.permissions

@@ -7,5 +7,5 @@ interface EntityAccessManagerInterface {
 
   public function getUserPermissions(EntityInterface $entity, AccountInterface $account = NULL);
 
-  public function
+//  public function
 }

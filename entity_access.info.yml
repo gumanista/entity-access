@@ -3,4 +3,6 @@ type: module
 description: This module allow site managers to set roles for users linked to certain node
 core: 8.x
 package: Access
+dependencies:
+  - user
 

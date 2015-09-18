@@ -1,0 +1,6 @@
+#entity.entity_access_role.add:
+#  route_name: entity.entity_access_role.add
+#  title: 'Add role'
+#  apperars_on:
+#    - entity.entity_access_role.collection
+
